@@ -27,13 +27,14 @@ Regex-powered in-page search for Chrome that highlights matches and lets you cus
    - Open `chrome://extensions`.
    - Enable **Developer mode**.
    - Click **Load unpacked…** and choose the project’s `dist/` directory (not `src/`).
+   - After code changes, rerun `npm run build` and press **Reload** on the extension card.
 
 ## Development Tips
 
 - `npm run build:watch` – continuously rebuilds the background, content, and options scripts.
 - `npm run lint` – runs ESLint with the configured TypeScript rules.
 - `npm test` – executes unit tests via Vitest (with jsdom and Chrome storage stubs).
-- `npm run test:integration` – drives Playwright against the unpacked extension (requires `npx playwright install` once).
+- `npm run test:integration` – drives Playwright against the unpacked extension (requires `npx playwright install` and a fresh `npm run build` so `dist/` is current).
 
 When iterating on UI tweaks, rebuild and hit **Reload** in `chrome://extensions` to pick up the latest `dist/` assets.
 

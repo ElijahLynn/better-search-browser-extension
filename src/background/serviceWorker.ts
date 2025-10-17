@@ -18,7 +18,7 @@ chrome.commands.onCommand.addListener(async (command) => {
     if (error instanceof Error && error.message.includes("Receiving end does not exist")) {
       await chrome.scripting.executeScript({
         target: { tabId: tab.id },
-        files: ["dist/content/index.js"]
+        files: ["content/index.js"]
       });
       await chrome.tabs.sendMessage(tab.id, { type: "toggle-search" });
     }
