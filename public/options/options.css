@@ -1,0 +1,142 @@
+:root {
+  color-scheme: light dark;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  background: var(--page-bg, #f5f7fa);
+  color: var(--page-fg, #1f2933);
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+}
+
+.page__header {
+  margin-bottom: 24px;
+}
+
+.page__title {
+  margin: 0 0 8px;
+  font-size: 1.75rem;
+}
+
+.page__description {
+  margin: 0;
+  color: #52606d;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  margin-bottom: 24px;
+}
+
+.card__title {
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+}
+
+.card__helper {
+  margin: 0 0 16px;
+  color: #616e7c;
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+}
+
+.form__label {
+  font-weight: 600;
+}
+
+.form__input {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #d2d6dc;
+  border-radius: 6px;
+}
+
+.form__input:focus {
+  outline: none;
+  border-color: #3f83f8;
+  box-shadow: 0 0 0 3px rgba(63, 131, 248, 0.35);
+}
+
+.form__hint {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #52606d;
+}
+
+.form__error {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #d61f69;
+}
+
+.form__actions {
+  display: flex;
+  gap: 12px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: filter 120ms ease-in-out;
+}
+
+.button:hover {
+  filter: brightness(0.95);
+}
+
+.button--primary {
+  background: #2563eb;
+  color: white;
+}
+
+.button--secondary {
+  background: #e4e7eb;
+  color: #1f2933;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --page-bg: #0f172a;
+    --page-fg: #e2e8f0;
+  }
+
+  .card {
+    background: #16213c;
+    box-shadow: none;
+  }
+
+  .card__helper,
+  .form__hint {
+    color: #9aa5b1;
+  }
+
+  .form__input {
+    background: #0f172a;
+    color: inherit;
+    border-color: #334155;
+  }
+
+  .button--secondary {
+    background: #1f2937;
+    color: #e2e8f0;
+  }
+}
